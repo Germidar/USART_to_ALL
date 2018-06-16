@@ -16,10 +16,20 @@ Data Stack size         : 256
 
 #include <mega16a.h>
 #include <delay.h>
+#include <1-wire.c>
 
 #define FRAMING_ERROR (1<<FE)
 #define PARITY_ERROR (1<<UPE)
 #define DATA_OVERRUN (1<<DOR)
+
+unsigned char COMBUFFER[256];
+unsigned char pBuf = 0x00;
+
+void COM_Tx (unsigned char data)
+{
+while(!(UCSRA & (1<<UDRE)));
+UDR = data;
+}
 
 // USART Receiver interrupt service routine
 interrupt [USART_RXC] void usart_rx_isr(void)
@@ -29,7 +39,16 @@ status=UCSRA;
 data=UDR;
 if ((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN))==0)
 	{
-
+    if (pBuf < 255)
+    	{
+        COMBUFFER[pBuf] = data;
+        pBuf++;
+    	}
+    else
+    	{
+        COMBUFFER[pBuf] = data;
+        pBuf = 0x00;
+        }
     }
 else
 	{
@@ -41,6 +60,11 @@ else
 
 // USART Transmitter interrupt service routine
 interrupt [USART_TXC] void usart_tx_isr(void)
+{
+
+}
+
+void ComParser (void)
 {
 
 }
@@ -58,6 +82,11 @@ UBRRL=0x07;
 
 while (1)
 {
-
+COM_Tx('R');
+COM_Tx('D');
+COM_Tx('Y');
+COM_Tx(13);
+COM_Tx(10);
+delay_ms(1000);
 }
 }
