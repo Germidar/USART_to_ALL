@@ -7,7 +7,7 @@ A=Germidar
 C=
 D=16.06.2018
 Files=1
-OpenedFiles=1
+OpenedFiles=4
 OF1=main.c
 Active1=1
 DebugOutputListFilesDirectory=Debug\List
@@ -27,8 +27,23 @@ Active0=0
 EditorPanel0=0
 PageIndex0=0
 EditorPanel1=0
-TimeStamp1=1288746797
+TimeStamp1=1288802027
 PageIndex1=1
+OF2=1-wire.c
+Active2=0
+EditorPanel2=0
+TimeStamp2=1288611964
+PageIndex2=2
+OF3=Debug\List\USART_to_ALL.map
+Active3=0
+EditorPanel3=0
+TimeStamp3=1288798315
+PageIndex3=3
+OF4=CommandManager.c
+Active4=0
+EditorPanel4=0
+TimeStamp4=1288800941
+PageIndex4=4
 [CompilerDebug]
 Chip=ATmega16A
 CPUClock=14745600
@@ -127,8 +142,8 @@ WatchAVR8LAutoVariables=0
 UseEEPROMLocation0=1
 RebuildAll=0
 LinkageInformationPresent=1
-COFFileTimeStamp=1288746800
-Build=19
+COFFileTimeStamp=1288810984
+Build=77
 [DefinedSymbolsDebug]
 Count=0
 [Compiler]
@@ -230,7 +245,7 @@ UseEEPROMLocation0=1
 RebuildAll=1
 LinkageInformationPresent=0
 COFFileTimeStamp=-1
-Build=19
+Build=77
 IncludePath0=
 IncludePath1=
 IncludePath2=
@@ -462,16 +477,16 @@ L13=Enhanced function parameters passing: Yes
 L14=Automatic register allocation: Yes
 L15=Smart register allocation: Yes
 L16=
-L17=Build: 18
-L18=912 line(s) compiled
+L17=Build: 77
+L18=1015 line(s) compiled
 L19=No errors
-L20=1 warning(s)
+L20=3 warning(s)
 L21=
 L22=Bit variables size: 0 byte(s)
 L23=
 L24=Data Stack area: 0x60 to 0x25F
 L25=Data Stack size: 512 byte(s)
-L26=Estimated Data Stack usage: 6 byte(s)
+L26=Estimated Data Stack usage: 19 byte(s)
 L27=
 L28=RAM Global variables area: 0x260 to 0x35F
 L29=RAM Global variables size: 256 byte(s)
@@ -482,29 +497,30 @@ L33=
 L34=Heap size: 0 byte(s)
 L35=
 L36=EEPROM usage: 0 byte(s), 0,0% of EEPROM
-L37=Program size: 171 words (342 bytes), 2,1% of FLASH
+L37=Program size: 288 words (576 bytes), 3,5% of FLASH
 Lines=37
 [BuildInfoAssembler]
 L1=AVRASM: AVR macro assembler 2.1.30 (build 592 Nov  7 2008 12:38:17)
 L2=Copyright (C) 1995-2008 ATMEL Corporation
 L3=
-L4=Z:\home\germidar\MK_Projects\USART_to_ALL\Debug\List\USART_to_ALL.asm(1492): No EEPROM data, deleting Z:\home\germidar\MK_Projects\USART_to_ALL\Debug\Exe\USART_to_ALL.eep
+L4=Z:\home\germidar\MK_Projects\USART_to_ALL\Debug\List\USART_to_ALL.asm(1751): No EEPROM data, deleting Z:\home\germidar\MK_Projects\USART_to_ALL\Debug\Exe\USART_to_ALL.eep
 L5=
 L6=ATmega16A memory use summary [bytes]:
 L7=Segment   Begin    End      Code   Data   Used    Size   Use%
 L8=---------------------------------------------------------------
-L9=[.cseg] 0x000000 0x000156    332     10    342   16384   2.1%
+L9=[.cseg] 0x000000 0x000240    566     10    576   16384   3.5%
 L10=[.dseg] 0x000060 0x000360      0    256    256    1024  25.0%
 L11=[.eseg] 0x000000 0x000000      0      0      0     512   0.0%
 L12=
 Lines=12
 [BookmarksFoldedCode]
-Files=5
+Files=6
 F1=Debug\List\USART_to_ALL.lst
 F2=Debug\List\USART_to_ALL.asm
 F3=Debug\List\USART_to_ALL.map
 F4=1-wire.c
 F5=main.c
+F6=Z:\home\germidar\MK_Projects\USART_to_ALL\CommandManager.c
 [Bookmarks1]
 TimeStamp=1288741948
 Row=0
@@ -524,32 +540,7 @@ BK9=-1
 [FoldedCode1]
 Blocks=0
 [Bookmarks2]
-TimeStamp=1288741948
-Row=0
-Column=0
-ScrollPosX=0
-ScrollPosY=1192
-BK0=-1
-BK1=-1
-BK2=-1
-BK3=-1
-BK4=-1
-BK5=-1
-BK6=-1
-BK7=-1
-BK8=-1
-BK9=-1
-[FoldedCode2]
-Blocks=0
-[USBLibrary]
-UseSuspend=0
-CDCVirtualSerialPort=0
-HIDGeneric=0
-HIDKeyboard=0
-HIDMouse=0
-HIDJoystick=0
-[Bookmarks3]
-TimeStamp=1288742278
+TimeStamp=1288797847
 Row=0
 Column=0
 ScrollPosX=0
@@ -564,8 +555,29 @@ BK6=-1
 BK7=-1
 BK8=-1
 BK9=-1
-[FoldedCode3]
-Blocks=0
+[USBLibrary]
+UseSuspend=0
+CDCVirtualSerialPort=0
+HIDGeneric=0
+HIDKeyboard=0
+HIDMouse=0
+HIDJoystick=0
+[Bookmarks3]
+TimeStamp=1288801964
+Row=24
+Column=10
+ScrollPosX=0
+ScrollPosY=12
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
 [Bookmarks4]
 TimeStamp=1288611964
 Row=0
@@ -582,6 +594,57 @@ BK6=-1
 BK7=-1
 BK8=-1
 BK9=-1
+[Bookmarks0]
+Row=0
+Column=0
+ScrollPosX=0
+ScrollPosY=0
+TimeStamp=1288804411
+[Bookmarks5]
+TimeStamp=1288802027
+Row=118
+Column=16
+ScrollPosX=0
+ScrollPosY=43
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode2]
+Blocks=0
+[FoldedCode5]
+Line1=1
+Line2=40
+Line3=66
+Line4=81
+Line5=86
+Blocks=5
+[Bookmarks6]
+TimeStamp=1288800941
+Row=1
+Column=0
+ScrollPosX=0
+ScrollPosY=0
+BK0=-1
+BK1=-1
+BK2=-1
+BK3=-1
+BK4=-1
+BK5=-1
+BK6=-1
+BK7=-1
+BK8=-1
+BK9=-1
+[FoldedCode6]
+Blocks=0
+[FoldedCode3]
+Blocks=0
 [FoldedCode4]
 Blocks=0
 [HeadersList]
@@ -593,29 +656,3 @@ F1=c:\cvavr\inc\mega16a.h
 F2=c:\cvavr\inc\mega16_bits.h
 F3=c:\cvavr\inc\delay.h
 F4=1-wire.c
-[Bookmarks0]
-Row=0
-Column=0
-ScrollPosX=0
-ScrollPosY=0
-TimeStamp=1288747097
-[Bookmarks5]
-TimeStamp=1288746797
-Row=55
-Column=78
-ScrollPosX=0
-ScrollPosY=37
-BK0=-1
-BK1=-1
-BK2=-1
-BK3=-1
-BK4=-1
-BK5=-1
-BK6=-1
-BK7=-1
-BK8=-1
-BK9=-1
-[FoldedCode5]
-Line1=1
-Line2=62
-Blocks=2
